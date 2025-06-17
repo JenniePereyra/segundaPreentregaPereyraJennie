@@ -1,0 +1,28 @@
+/* Extends */
+%fondo-principal {
+    background-image: url('../imagenes/paginaInicio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    overflow: visible;
+}
+
+%footer {
+    background-color: $color-fondo;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+%icono-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    object-fit: contain;
+    margin-top: 1rem;
+    width: 70px;
+}

@@ -1,0 +1,12 @@
+/* Nosotros */
+.logo-abbott {
+    display: block;
+    margin: 1rem auto 0 auto;
+    width: 15rem;
+}
+
+.subtitulo-nosotros {
+    @include centrar-absoluto;
+    color: $color-titulo-texto;
+    margin-top: 6rem;
+}

@@ -1,288 +1,232 @@
-/* Estilo general */
+/* Utilities */
+/* Variables */
+/* Extends */
+
 * {
-    font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+.main-contacto,
+.main-sucursales,
+.main-productos,
+.header-nosotros,
+.header-principal {
+  background-image: url("../imagenes/paginaInicio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  overflow: visible;
 }
+
+.footer-contacto,
+.footer-sucursales,
+.footer-productos,
+.footer-nosotros,
+.footer-principal {
+  background-color: rgba(248, 249, 250, 0.89);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.icono-youTube,
+.icono-instagram,
+.icono-whatsApp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  object-fit: contain;
+  margin-top: 1rem;
+  width: 70px;
+}
+
+/* Mixins */
+/* Base */
+@im "";
 
 .oscurecer-fondo {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.438);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.151);
 }
 
-/* Estilo header */
-.header-principal,
-.header-nosotros,
-.main-productos,
-.main-sucursales,
-.main-contacto {
-    background-image: url('../imagenes/casaCentral.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw;
-    min-height: 100vh;
-    position: relative;
-    overflow: visible;
-}
-
-.header-inferior {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    padding: 50px 20px;
-    height: 90%;
-}
-
-.logo-header {
-    max-width: 325px;
-    height: auto;
-    align-items: center;
-    margin: 0 auto;
-    margin-bottom: 8rem;
-    margin-top: 15rem;
+.titulo-principal {
+  color: rgb(255, 255, 255);
+  font-size: 2.5rem;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
 .texto-principal {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: rgb(255, 255, 255);
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+/* Header */
+.header-inferior {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: 50px 20px;
+  height: 90%;
+}
+
+.logo-header {
+  max-width: 325px;
+  height: auto;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  margin-top: 8rem;
+  z-index: 2;
 }
 
 .logoIco {
-    width: 3rem;
+  width: 3rem;
 }
 
-/* Estilo nosotros */
-.titulo-nosotros {
-    color: rgb(255, 255, 255);
-    font-size: 2.5rem;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    position: relative;
-    z-index: 2;
-    text-align: center;
+/* Nosotros */
+.logo-abbott {
+  display: block;
+  margin: 1rem auto 0 auto;
+  width: 15rem;
 }
 
-.texto-nosotros {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: rgb(255, 255, 255);
-    margin-top: 5rem;
+.subtitulo-nosotros {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-top: 6rem;
 }
 
-/* Estilo productos */
-.titulo-productos {
-    color: rgb(255, 255, 255);
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-
-.texto-productos {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: rgb(255, 255, 255);
-    margin-top: 3rem;
-    margin-bottom: 0rem;
-}
-
+/* Productos */
 .productos-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-top: 0.1rem;
-    margin-bottom: 1rem;
-    justify-items: center;
-    min-height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 0.1rem;
+  margin-bottom: 1rem;
+  justify-items: center;
+  min-height: auto;
 }
 
 .card-productos {
-    background-color: rgba(248, 249, 250, 0.89);
-    border-radius: 8px;
-    padding: 1.5rem;
-    padding-top: 1rem;
-    margin: 0.5rem;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    transition: transform 0.5s;
+  background-color: rgba(248, 249, 250, 0.89);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s;
+  max-width: 250px;
 }
 
 .card-productos:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .imagenProducto {
-    width: 80%;
-    height: auto;
-    object-fit: contain;
-    max-height: 200px;
-    margin-bottom: 0.2rem;
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  max-height: 200px;
+  margin-bottom: 0.2rem;
 }
 
-/* Estilo sucursales */
-.titulo-sucursales {
-    color: rgb(255, 255, 255);
-    font-size: 2.5rem;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-
-.texto-sucursales {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: rgb(255, 255, 255);
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-}
-
+/* Sucursales */
 .sucursales-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1.5rem;
 }
 
 .card-sucursales {
-    background-color: rgba(248, 249, 250, 0.89);
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 0.5rem;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    flex: 1 1 300px;
-    max-width: 350px;
-    z-index: 2;
-    transition: transform 0.5s;
+  background-color: rgba(248, 249, 250, 0.89);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s;
+  max-width: 350px;
+  flex: 1 1 300px;
 }
 
 .card-sucursales:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .card-sucursales img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
-/* Estilo contacto */
-.titulo-contacto {
-    color: rgb(255, 255, 255);
-    font-size: 2.5rem;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    position: relative;
-    z-index: 2;
-    text-align: center;
-}
-
-.texto-contacto {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: rgb(255, 255, 255);
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-}
-
+/* Contacto */
 .contacto-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
 }
 
 .card-contacto {
-    background-color: rgba(248, 249, 250, 0.89);
-    border-radius: 8px;
-    padding: 1rem;
-    margin: 0.5rem;
-    margin-top: 4rem;
-    margin-bottom: 3rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    flex: 1 1 300px;
-    max-width: 350px;
-    z-index: 2;
-    transition: transform 0.5s;
+  background-color: rgba(248, 249, 250, 0.89);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s;
+  max-width: 350px;
+  flex: 1 1 300px;
 }
 
 .card-contacto:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-.icono-whatsApp,
-.icono-instagram,
-.icono-youtube {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    object-fit: contain;
-    margin-top: 1rem;
-}
+/* Footer */
 
-.icono-whatsApp { width: 70px; }
-.icono-instagram { width: 90px; }
-.icono-youtube { width: 125px; }
-
-/* Estilo footer */
-.footer-principal,
-.footer-nosotros,
-.footer-productos,
-.footer-sucursales,
-.footer-contacto {
-    background-color: rgb(248, 249, 250);
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 1rem 0;
-}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,18 @@
+/* Contacto */
+.contacto-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.card-contacto {
+    @include tarjeta(350px);
+    flex: 1 1 300px;
+}
+
+.card-contacto:hover {
+    transform: scale(1.05);
+}

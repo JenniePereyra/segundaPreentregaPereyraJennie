@@ -1,0 +1,24 @@
+/* Sucursales */
+.sucursales-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1.5rem;
+}
+
+.card-sucursales {
+    @include tarjeta(350px);
+    flex: 1 1 300px;
+}
+
+.card-sucursales:hover {
+    transform: scale(1.05);
+}
+
+.card-sucursales img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}

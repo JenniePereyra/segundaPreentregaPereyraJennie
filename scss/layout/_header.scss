@@ -1,0 +1,43 @@
+/* Header */
+.header-principal {
+    @extend %fondo-principal;
+}
+
+.header-nosotros {
+    @extend %fondo-principal;
+}
+
+.main-productos {
+    @extend %fondo-principal;
+}
+
+.main-sucursales {
+    @extend %fondo-principal;
+}
+
+.main-contacto {
+    @extend %fondo-principal;
+}
+
+.header-inferior {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 50px 20px;
+    height: 90%;
+}
+
+.logo-header {
+    max-width: 325px;
+    height: auto;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    margin-top: 8rem;
+    z-index: 2;
+}
+
+.logoIco {
+    width: 3rem;
+}
